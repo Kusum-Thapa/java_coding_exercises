@@ -7,6 +7,7 @@ import org.junit.Test;
 public class Exercise002Test {
 
     @Test
+   
     public void checkIsFromManchester() {
         Exercise002 ex002 = new Exercise002();
 
@@ -18,6 +19,7 @@ public class Exercise002Test {
     }
 
     @Test
+  
     public void checkCanWatchFilm() {
         Exercise002 ex002 = new Exercise002();
 
