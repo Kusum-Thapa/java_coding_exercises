@@ -18,7 +18,7 @@ public class Exercise001 {
     public double addVat(double originalPrice, double vatRate) {
 
         double vatPrice = originalPrice + (vatRate * 0.01 * originalPrice) ;
-        String strValue = (String) String.format("%.2f", vatPrice);
+        String strValue = String.format("%.2f", vatPrice);
 
        return  Double.parseDouble(strValue);
     }
@@ -27,26 +27,25 @@ public class Exercise001 {
 
         List<String> reversedString = new LinkedList<>() ;
 
-        for (String word: sentence.split(" "))
-        {
+        for (String word: sentence.split(" ")){
+
             StringBuilder reversedWord =new StringBuilder(word).reverse();
             reversedString.add(reversedWord.toString());
         }
 
         Collections.reverse(reversedString);
-        String reverseSentence = String.join(" ",reversedString);
 
-        return reverseSentence;       
+        return String.join(" ",reversedString  );     
     }
 
     public int countLinuxUsers(List<User> users) {
         
         int linuxUserCount = 0;
-        for(User user: users)
-        {
-            if(user.getType() == "Linux")
+        
+         for(User user: users)
+            if (user.getType().equals("Linux"))
                 linuxUserCount++;
-        }
+
         return linuxUserCount;
     }
 }
